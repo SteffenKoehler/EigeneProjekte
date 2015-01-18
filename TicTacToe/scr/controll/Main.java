@@ -19,12 +19,12 @@ public class Main {
 		
 		System.out.println("******************************************");
 		
-//		spielfeld.setzen('X', 3);
-//		spielfeld.setzen('O', 0);
-//		spielfeld.setzen('X', 4);
-//		spielfeld.setzen('O', 5);
-//		spielfeld.setzen('X', 1);
-//		spielfeld.setzen('O', 7);
+		spielfeld.setzen('X', 3);
+		spielfeld.setzen('O', 0);
+		spielfeld.setzen('X', 4);
+		spielfeld.setzen('O', 5);
+		spielfeld.setzen('X', 1);
+		spielfeld.setzen('O', 7);
 		
 		spielfeld.printSpielfeld();
 		
