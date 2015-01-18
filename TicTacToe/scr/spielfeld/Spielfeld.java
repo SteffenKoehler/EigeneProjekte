@@ -1,15 +1,11 @@
 package spielfeld;
 
-import java.util.Arrays;
-
-import javax.swing.plaf.SliderUI;
-
 public class Spielfeld {
 
-	public char[] spielfeld;
+	public static char[] spielfeld;
 
 	public Spielfeld() {
-		this.spielfeld = new char[9];
+		Spielfeld.spielfeld = new char[9];
 
 		for (int i = 0; i < spielfeld.length; i++) {
 
@@ -19,7 +15,7 @@ public class Spielfeld {
 	}
 	
 	public char[] getSpielfeld(){
-		return this.spielfeld;
+		return Spielfeld.spielfeld;
 	}
 
 	public void printSpielfeld() {
@@ -29,11 +25,11 @@ public class Spielfeld {
 			}
 			System.out.print(" | " + spielfeld[i]);
 			}
-		System.out.println(" |" + "\n");
+		System.out.println(" |" + "\n" + "***********************************");
 	}
 
 	public void setzen(char stein, int feld) {
-		spielfeld[feld] = stein;
+		Spielfeld.spielfeld[feld] = stein;
 	}
 
 }

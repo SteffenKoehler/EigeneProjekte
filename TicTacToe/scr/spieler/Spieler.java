@@ -1,5 +1,7 @@
 package spieler;
 
+import spielfeld.Spielfeld;
+
 public abstract class Spieler {
 	
 	protected String name;
@@ -15,6 +17,10 @@ public abstract class Spieler {
 	
 	public char getSymbol(){
 		return this.symbol;
+	}
+	
+	public void setzeStein(int feld){
+		Spielfeld.spielfeld[feld] = this.getSymbol();
 	}
 	
 	@Override
