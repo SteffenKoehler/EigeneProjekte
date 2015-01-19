@@ -17,6 +17,10 @@ public class Spielfeld {
 	public char[] getSpielfeld(){
 		return Spielfeld.spielfeld;
 	}
+	
+	public char getSpielstein(int feld){
+		return Spielfeld.spielfeld[feld];
+	}
 
 	public void printSpielfeld() {
 		for (int i = 0; i < spielfeld.length; i++) {
