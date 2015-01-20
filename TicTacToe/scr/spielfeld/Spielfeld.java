@@ -5,13 +5,8 @@ public class Spielfeld {
 	public static char[] spielfeld;
 
 	public Spielfeld() {
-		Spielfeld.spielfeld = new char[9];
-
-		for (int i = 0; i < spielfeld.length; i++) {
-
-			spielfeld[i] = '_';
-
-		}
+		Spielfeld.spielfeld = new char[10];
+		clearSpielfeld();
 	}
 	
 	public char[] getSpielfeld(){
@@ -23,8 +18,8 @@ public class Spielfeld {
 	}
 
 	public void printSpielfeld() {
-		for (int i = 0; i < spielfeld.length; i++) {
-			if (i == 3 | i == 6) {
+		for (int i = 1; i < spielfeld.length; i++) {
+			if (i == 4 | i == 7) {
 				System.out.println(" |" + "\n");
 			}
 			System.out.print(" | " + spielfeld[i]);
@@ -34,6 +29,14 @@ public class Spielfeld {
 
 	public void setzen(char stein, int feld) {
 		Spielfeld.spielfeld[feld] = stein;
+	}
+	
+	public void clearSpielfeld(){
+		for (int i = 1; i < spielfeld.length; i++) {
+
+			spielfeld[i] = '_';
+
+		}
 	}
 
 }

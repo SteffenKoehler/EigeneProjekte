@@ -2,6 +2,7 @@ package controll;
 
 import java.util.Scanner;
 
+import spieler.Spieler;
 import spieler.SpielerO;
 import spieler.SpielerX;
 import spielfeld.Spielfeld;
@@ -9,11 +10,11 @@ import spielfeld.Spielfeld;
 public class Main {
 
 	private static Scanner sc;
+	public static Controll controll = new Controll();
+	public static Spielfeld spielfeld = new Spielfeld();
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		Spielfeld spielfeld = new Spielfeld();
 		
 		sc = new Scanner(System.in);
 	    System.out.print("Gib deinen Namen ein: ");
@@ -26,16 +27,16 @@ public class Main {
 		
 		
 		System.out.println("++++++++++++++++++++++");
-		System.out.println(spieler2.getName());
 		
+		
+		while(!controll.istSpielGewonnen()){
 	    
 		spielfeld.printSpielfeld();
-		spieler1.setzeStein(sc.nextInt());
-		spielfeld.printSpielfeld();
 		spieler2.setzeStein(sc.nextInt());
-		
 		spielfeld.printSpielfeld();
+		spieler1.setzeStein(sc.nextInt());
 		
+		}
 
 	}
 

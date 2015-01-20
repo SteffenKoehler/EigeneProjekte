@@ -2,12 +2,14 @@ package spieler;
 
 import java.util.Scanner;
 
-import spielfeld.Spielfeld;
+import controll.Controll;
 
 public abstract class Spieler {
 	
+	private Spieler spieler;
 	protected String name;
 	protected char symbol;
+	private Controll controll = new Controll();
 	Scanner sc = new Scanner(System.in);
 	
 	public void setName(String name){
@@ -22,16 +24,15 @@ public abstract class Spieler {
 		return this.symbol;
 	}
 	
-	public void setzeStein(int feld) {
-		if (Spielfeld.spielfeld[feld] == '_') {
-			Spielfeld.spielfeld[feld] = this.getSymbol();
-		} else {
-			System.out
-					.println("Setzen nicht möglich, bitte richtiges Feld wählen");
-			this.setzeStein(sc.nextInt());
-		}
-
+	public Spieler getSpieler(){
+		return this.spieler;
 	}
+	
+	public void setzeStein(int feld) {
+		controll.korrekterZug(this, feld);
+	}
+	
+	
 	
 	@Override
 	public String toString(){
