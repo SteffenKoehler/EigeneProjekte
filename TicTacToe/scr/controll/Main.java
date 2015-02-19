@@ -29,7 +29,7 @@ public class Main {
 		System.out.println("++++++++++++++++++++++");
 		
 		
-		while(!controll.istSpielGewonnen()){
+		while(true){
 	    
 		spielfeld.printSpielfeld();
 		spieler2.setzeStein(sc.nextInt());
