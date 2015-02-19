@@ -2,13 +2,14 @@ package spieler;
 
 import java.util.Scanner;
 
+import Spielstein.Spielstein;
 import controll.Controll;
 
 public abstract class Spieler {
 	
 	private Spieler spieler;
 	protected String name;
-	protected char symbol;
+	protected Spielstein spielstein;
 	private Controll controll = new Controll();
 	Scanner sc = new Scanner(System.in);
 	
@@ -20,9 +21,10 @@ public abstract class Spieler {
 		return this.name;
 	}
 	
-	public char getSymbol(){
-		return this.symbol;
+	public Spielstein getSpielstein(){
+		return this.spielstein;
 	}
+	
 	
 	public Spieler getSpieler(){
 		return this.spieler;
@@ -36,7 +38,7 @@ public abstract class Spieler {
 	
 	@Override
 	public String toString(){
-		return "Spieler: " + this.getName() + " " + "[" + this.getSymbol() + "]";
+		return "Spieler: " + this.getName() + " " + "[" + this.spielstein.getSymbol() + "]";
 		
 	}
 

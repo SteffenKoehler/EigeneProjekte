@@ -1,19 +1,22 @@
 package spielfeld;
 
+import Spielstein.DefaultSpielstein;
+import Spielstein.Spielstein;
+
 public class Spielfeld {
 
-	public static char[] spielfeld;
+	public static Spielstein[] spielfeld;
 
 	public Spielfeld() {
-		Spielfeld.spielfeld = new char[10];
+		Spielfeld.spielfeld = new Spielstein[10];
 		clearSpielfeld();
 	}
 	
-	public char[] getSpielfeld(){
+	public Spielstein[] getSpielfeld(){
 		return Spielfeld.spielfeld;
 	}
 	
-	public char getSpielstein(int feld){
+	public Spielstein getSpielstein(int feld){
 		return Spielfeld.spielfeld[feld];
 	}
 
@@ -27,14 +30,14 @@ public class Spielfeld {
 		System.out.println(" |" + "\n" + "***********************************");
 	}
 
-	public void setzen(char stein, int feld) {
+	public void setzen(Spielstein stein, int feld) {
 		Spielfeld.spielfeld[feld] = stein;
 	}
 	
 	public void clearSpielfeld(){
 		for (int i = 1; i < spielfeld.length; i++) {
 
-			spielfeld[i] = '_';
+			spielfeld[i] = new DefaultSpielstein();
 
 		}
 	}

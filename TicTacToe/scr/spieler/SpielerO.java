@@ -1,10 +1,12 @@
 package spieler;
 
+import Spielstein.OSpielstein;
+
 public class SpielerO extends Spieler {
 
 	public SpielerO(String name) {
 		this.name = name;
-		this.symbol = 'O';
+		this.spielstein = new OSpielstein();
 	}
 
 }
