@@ -10,7 +10,6 @@ import spielfeld.Spielfeld;
 public class Main {
 
 	private static Scanner sc;
-	public static Controll controll = new Controll();
 	public static Spielfeld spielfeld = new Spielfeld();
 
 	public static void main(String[] args) {
@@ -25,18 +24,11 @@ public class Main {
 		SpielerX spieler2 = new SpielerX(sc.next());
 		System.out.println(spieler2);
 		
+		Controll controll = new Controll(spieler1, spieler2);
 		
 		System.out.println("++++++++++++++++++++++");
 		
 		
-		while(true){
-	    
-		spielfeld.printSpielfeld();
-		spieler2.setzeStein(sc.nextInt());
-		spielfeld.printSpielfeld();
-		spieler1.setzeStein(sc.nextInt());
-		
-		}
 
 	}
 
