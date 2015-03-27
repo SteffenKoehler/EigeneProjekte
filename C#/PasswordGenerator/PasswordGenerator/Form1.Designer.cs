@@ -35,7 +35,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seiteHinzufügenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Seite = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Account = new System.Windows.Forms.ComboBox();
             this.generieren = new System.Windows.Forms.Button();
@@ -93,15 +93,18 @@
             this.seiteHinzufügenToolStripMenuItem.Name = "seiteHinzufügenToolStripMenuItem";
             this.seiteHinzufügenToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.seiteHinzufügenToolStripMenuItem.Text = "Neuer Account";
+            this.seiteHinzufügenToolStripMenuItem.Click += new System.EventHandler(this.seiteHinzufügenToolStripMenuItem_Click);
             // 
-            // comboBox1
+            // Seite
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(79, 124);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 7;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.Seite.FormattingEnabled = true;
+            this.Seite.Items.AddRange(new object[] {
+            "seiteHallo"});
+            this.Seite.Location = new System.Drawing.Point(79, 124);
+            this.Seite.Name = "Seite";
+            this.Seite.Size = new System.Drawing.Size(121, 21);
+            this.Seite.TabIndex = 7;
+            this.Seite.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -115,6 +118,8 @@
             // Account
             // 
             this.Account.FormattingEnabled = true;
+            this.Account.Items.AddRange(new object[] {
+            "hallo"});
             this.Account.Location = new System.Drawing.Point(79, 83);
             this.Account.Name = "Account";
             this.Account.Size = new System.Drawing.Size(121, 21);
@@ -144,11 +149,12 @@
             this.Controls.Add(this.generieren);
             this.Controls.Add(this.Account);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Seite);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PasswortTextBox);
             this.Controls.Add(this.menuStrip1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Passwort Generator";
@@ -168,7 +174,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem optionenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seiteHinzufügenToolStripMenuItem;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Seite;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox Account;
         private System.Windows.Forms.Button generieren;

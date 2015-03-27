@@ -1,0 +1,13 @@
+<Details>
+  <RequestTypeDetails>
+    <RequestType>      
+      <value>News</value>
+    </RequestType>
+    <RequestType>      
+      <value>Press Release</value>
+    </RequestType>
+    <RequestType>     
+      <value>Content Update</value>
+    </RequestType>
+  </RequestTypeDetails>
+</Details>

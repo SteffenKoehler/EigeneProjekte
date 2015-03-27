@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace PasswordGenerator
 {
     public partial class Form1 : Form
+        
+
     {
+        Crypter crypter = new Crypter();
         public Form1()
         {
             InitializeComponent();
@@ -21,12 +25,12 @@ namespace PasswordGenerator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+          
         }
 
         private void PasswortTextBox_TextChanged(object sender, EventArgs e)
@@ -36,13 +40,61 @@ namespace PasswordGenerator
 
         private void button3_Click(object sender, EventArgs e)
         {
-            String passwort = PasswortTextBox.Text;
-            Crypter.setPasswort(passwort);
+            crypter.setPasswort(PasswortTextBox.Text);
+            crypter.setAccount(Account.Text);
+            crypter.setSeite(Seite.Text);
+
+            crypter.crypt();
+
+            Console.WriteLine(crypter.getPasswort());
+            Console.WriteLine(crypter.getAccount());
+            Console.WriteLine(crypter.getSeite());
+            Console.WriteLine(crypter.crypt());
+
+            String message = "Das Passwort wurde in die Zwichenablage kopiert und kann mit Strg+V eingefügt werden";
+            MessageBox.Show(message);
         }
 
         private void Account_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Account.Items.Add("steffen-koehler1@gmx.de");
+
+            
+
+            Account.Items.Add("Hallo");
+
+            //XmlDocument doc = new XmlDocument();
+
+            ////Path of the XMl file
+            //doc.Load(@"C:\Users\Steffen\Documents\GitHub\EigeneProjekte\C#\PasswordGenerator\PasswordGenerator\bin\Debug\Account\account.xml");
+            //// Read the node of the XML
+            //XmlNodeList RequestTypeNodes = doc.GetElementsByTagName("RequestTypeDetails");
+            //// Make a object of list type
+            //List<String> RequestTypeMails = new List<String>();
+
+            //// Read the XML child node and fill the List
+            //foreach (XmlNode node in RequestTypeNodes[0].ChildNodes)
+            //{
+            //    RequestTypeMails.Add(node.InnerText);
+            //}
+            //// Bind the data of the list to the combo box(cmbRequestType)
+            //Account.Items.AddRange(RequestTypeMails.ToArray());
+
+
+
+            //AccountListe accountListe = new AccountListe();
+            //List<String> accountName = accountListe.readAccount();
+
+            //foreach (String account in accountName)
+            //{
+            //    Account.Items.Add(account);
+            //}
+
+        }
+
+        private void seiteHinzufügenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAccountHinzufügen formAcc = new FormAccountHinzufügen();
+            formAcc.Show();
         }
     }
 }
