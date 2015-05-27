@@ -1,0 +1,15 @@
+﻿Der Buildvorgang wurde am 29.04.2015 10:30:01 gestartet.
+     1>Projekt "C:\Users\Steffen\Documents\GitHub\EigeneProjekte\Studium\NAC\Projekt1\Projekt1\Projekt1.vcxproj" auf Knoten "2", Build Ziel(e).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
+         Main.cpp
+     1>c:\users\steffen\documents\github\eigeneprojekte\studium\nac\projekt1\projekt1\main.cpp(5): warning C4172: Adresse einer lokalen Variablen oder eines temporären Werts wird zurückgegeben
+     1>c:\users\steffen\documents\github\eigeneprojekte\studium\nac\projekt1\projekt1\main.cpp(7): warning C4172: Adresse einer lokalen Variablen oder eines temporären Werts wird zurückgegeben
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Steffen\Documents\GitHub\EigeneProjekte\Studium\NAC\Projekt1\Debug\Projekt1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Steffen\Documents\GitHub\EigeneProjekte\Studium\NAC\Projekt1\Debug\Projekt1.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Steffen\Documents\GitHub\EigeneProjekte\Studium\NAC\Projekt1\Debug\Projekt1.lib" /MACHINE:X86 Debug\Main.obj
+         Projekt1.vcxproj -> C:\Users\Steffen\Documents\GitHub\EigeneProjekte\Studium\NAC\Projekt1\Debug\Projekt1.exe
+     1>Die Erstellung des Projekts "C:\Users\Steffen\Documents\GitHub\EigeneProjekte\Studium\NAC\Projekt1\Projekt1\Projekt1.vcxproj" ist abgeschlossen, Build Ziel(e).
+
+Build erfolgreich.
+
+Verstrichene Zeit 00:00:01.91
