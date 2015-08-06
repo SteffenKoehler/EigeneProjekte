@@ -75,7 +75,7 @@
             this.optionenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(285, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(262, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -89,7 +89,6 @@
             // 
             // seiteHinzufügenToolStripMenuItem
             // 
-            this.seiteHinzufügenToolStripMenuItem.CheckOnClick = true;
             this.seiteHinzufügenToolStripMenuItem.Name = "seiteHinzufügenToolStripMenuItem";
             this.seiteHinzufügenToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.seiteHinzufügenToolStripMenuItem.Text = "Neuer Account";
@@ -98,8 +97,6 @@
             // Seite
             // 
             this.Seite.FormattingEnabled = true;
-            this.Seite.Items.AddRange(new object[] {
-            "seiteHallo"});
             this.Seite.Location = new System.Drawing.Point(79, 124);
             this.Seite.Name = "Seite";
             this.Seite.Size = new System.Drawing.Size(121, 21);
@@ -118,8 +115,6 @@
             // Account
             // 
             this.Account.FormattingEnabled = true;
-            this.Account.Items.AddRange(new object[] {
-            "hallo"});
             this.Account.Location = new System.Drawing.Point(79, 83);
             this.Account.Name = "Account";
             this.Account.Size = new System.Drawing.Size(121, 21);
@@ -145,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(285, 238);
+            this.ClientSize = new System.Drawing.Size(262, 207);
             this.Controls.Add(this.generieren);
             this.Controls.Add(this.Account);
             this.Controls.Add(this.label3);
@@ -155,8 +150,10 @@
             this.Controls.Add(this.PasswortTextBox);
             this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Passwort Generator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);

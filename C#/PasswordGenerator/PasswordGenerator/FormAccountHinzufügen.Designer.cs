@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.butHinzufuegen = new System.Windows.Forms.Button();
             this.textBoxAccount = new System.Windows.Forms.TextBox();
             this.textBoxSeite = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.butAbbrechen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // butHinzufuegen
             // 
-            this.button1.Location = new System.Drawing.Point(114, 158);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Hinzufügen";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.butHinzufuegen.Location = new System.Drawing.Point(39, 161);
+            this.butHinzufuegen.Name = "butHinzufuegen";
+            this.butHinzufuegen.Size = new System.Drawing.Size(75, 23);
+            this.butHinzufuegen.TabIndex = 0;
+            this.butHinzufuegen.Text = "Hinzufügen";
+            this.butHinzufuegen.UseVisualStyleBackColor = true;
+            this.butHinzufuegen.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBoxAccount
             // 
@@ -51,7 +52,6 @@
             this.textBoxAccount.Name = "textBoxAccount";
             this.textBoxAccount.Size = new System.Drawing.Size(143, 20);
             this.textBoxAccount.TabIndex = 1;
-            this.textBoxAccount.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBoxSeite
             // 
@@ -68,7 +68,6 @@
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Account";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -79,17 +78,29 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Seite";
             // 
+            // butAbbrechen
+            // 
+            this.butAbbrechen.Location = new System.Drawing.Point(157, 161);
+            this.butAbbrechen.Name = "butAbbrechen";
+            this.butAbbrechen.Size = new System.Drawing.Size(75, 23);
+            this.butAbbrechen.TabIndex = 5;
+            this.butAbbrechen.Text = "Abbrechen";
+            this.butAbbrechen.UseVisualStyleBackColor = true;
+            this.butAbbrechen.Click += new System.EventHandler(this.butAbbrechen_Click);
+            // 
             // FormAccountHinzufügen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(271, 219);
+            this.Controls.Add(this.butAbbrechen);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxSeite);
             this.Controls.Add(this.textBoxAccount);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.butHinzufuegen);
             this.Name = "FormAccountHinzufügen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Neuer Account";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -98,10 +109,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button butHinzufuegen;
         private System.Windows.Forms.TextBox textBoxAccount;
         private System.Windows.Forms.TextBox textBoxSeite;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button butAbbrechen;
     }
 }

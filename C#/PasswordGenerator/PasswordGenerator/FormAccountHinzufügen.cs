@@ -20,16 +20,6 @@ namespace PasswordGenerator
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             AccountListe accountListe = new AccountListe();
@@ -37,8 +27,14 @@ namespace PasswordGenerator
             String seite = textBoxSeite.Text;
 
             accountListe.writeAccount(account);
+            accountListe.writeAccount(seite);
 
 
+            this.Close();
+        }
+
+        private void butAbbrechen_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

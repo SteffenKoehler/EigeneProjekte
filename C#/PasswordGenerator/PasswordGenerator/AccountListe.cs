@@ -31,12 +31,12 @@ namespace PasswordGenerator
 
 
         // Schreib-Code
-        public void writeAccount(String account)
+        public void writeAccount(string account)
         {
 
             FileStream stream;
             stream = new FileStream(@"Account\account.xml", FileMode.Append);
-            XmlSerializer formatter = new XmlSerializer(typeof(String));
+            XmlSerializer formatter = new XmlSerializer(typeof(string));
             formatter.Serialize(stream, account);
             stream.Close();
 

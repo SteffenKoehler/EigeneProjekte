@@ -62,32 +62,32 @@ namespace PasswordGenerator
 
             Account.Items.Add("Hallo");
 
-            //XmlDocument doc = new XmlDocument();
+            XmlDocument doc = new XmlDocument();
 
-            ////Path of the XMl file
-            //doc.Load(@"C:\Users\Steffen\Documents\GitHub\EigeneProjekte\C#\PasswordGenerator\PasswordGenerator\bin\Debug\Account\account.xml");
-            //// Read the node of the XML
-            //XmlNodeList RequestTypeNodes = doc.GetElementsByTagName("RequestTypeDetails");
-            //// Make a object of list type
-            //List<String> RequestTypeMails = new List<String>();
+           // Path of the XMl file
+            doc.Load(@"C:\Users\Steffen\Documents\GitHub\EigeneProjekte\C#\PasswordGenerator\PasswordGenerator\bin\Debug\Account\account.xml");
+           //  Read the node of the XML
+            XmlNodeList RequestTypeNodes = doc.GetElementsByTagName("RequestTypeDetails");
+           //  Make a object of list type
+            List<String> RequestTypeMails = new List<String>();
 
-            //// Read the XML child node and fill the List
-            //foreach (XmlNode node in RequestTypeNodes[0].ChildNodes)
-            //{
-            //    RequestTypeMails.Add(node.InnerText);
-            //}
-            //// Bind the data of the list to the combo box(cmbRequestType)
-            //Account.Items.AddRange(RequestTypeMails.ToArray());
+           //  Read the XML child node and fill the List
+            foreach (XmlNode node in RequestTypeNodes[0].ChildNodes)
+            {
+                RequestTypeMails.Add(node.InnerText);
+            }
+           //  Bind the data of the list to the combo box(cmbRequestType)
+            Account.Items.AddRange(RequestTypeMails.ToArray());
 
 
 
-            //AccountListe accountListe = new AccountListe();
-            //List<String> accountName = accountListe.readAccount();
+            AccountListe accountListe = new AccountListe();
+            List<String> accountName = accountListe.readAccount();
 
-            //foreach (String account in accountName)
-            //{
-            //    Account.Items.Add(account);
-            //}
+            foreach (String account in accountName)
+            {
+                Account.Items.Add(account);
+            }
 
         }
 
