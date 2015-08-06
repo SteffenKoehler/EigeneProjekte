@@ -58,9 +58,6 @@ namespace PasswordGenerator
         private void Account_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            
-
-            Account.Items.Add("Hallo");
 
             XmlDocument doc = new XmlDocument();
 
@@ -69,7 +66,7 @@ namespace PasswordGenerator
            //  Read the node of the XML
             XmlNodeList RequestTypeNodes = doc.GetElementsByTagName("RequestTypeDetails");
            //  Make a object of list type
-            List<String> RequestTypeMails = new List<String>();
+            List<string> RequestTypeMails = new List<string>();
 
            //  Read the XML child node and fill the List
             foreach (XmlNode node in RequestTypeNodes[0].ChildNodes)
@@ -82,9 +79,9 @@ namespace PasswordGenerator
 
 
             AccountListe accountListe = new AccountListe();
-            List<String> accountName = accountListe.readAccount();
+            List<string> accountName     = accountListe.readAccount();
 
-            foreach (String account in accountName)
+            foreach (string account in accountName)
             {
                 Account.Items.Add(account);
             }

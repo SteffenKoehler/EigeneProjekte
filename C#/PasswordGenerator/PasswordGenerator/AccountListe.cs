@@ -12,19 +12,19 @@ namespace PasswordGenerator
 {
     class AccountListe
     {
-        public List<String> accountListe = new List<String>();
+        public List<string> accountListe = new List<string>();
 
 
        //  Lese-Code
-        public List<String> readAccount()
+        public List<string> readAccount()
         {
             FileStream fs = new FileStream(@"Account\account.xml", FileMode.Open); ;
-            XmlSerializer formatter = new XmlSerializer(typeof(String));
-            accountListe = (List<String>)formatter.Deserialize(fs);
+            XmlSerializer formatter = new XmlSerializer(typeof(string));
+            accountListe = (List<string>)formatter.Deserialize(fs);
 
-            foreach (String name in accountListe)
+            foreach (string name in accountListe)
             {
-                Console.WriteLine(name);
+                MessageBox.Show(name);
             }
             return accountListe;
         }

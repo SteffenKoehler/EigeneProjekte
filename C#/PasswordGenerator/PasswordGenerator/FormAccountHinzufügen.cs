@@ -27,9 +27,6 @@ namespace PasswordGenerator
             String seite = textBoxSeite.Text;
 
             accountListe.writeAccount(account);
-            accountListe.writeAccount(seite);
-
-
             this.Close();
         }
 

@@ -96,6 +96,7 @@
             // 
             // Seite
             // 
+            this.Seite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Seite.FormattingEnabled = true;
             this.Seite.Location = new System.Drawing.Point(79, 124);
             this.Seite.Name = "Seite";
@@ -114,6 +115,7 @@
             // 
             // Account
             // 
+            this.Account.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Account.FormattingEnabled = true;
             this.Account.Location = new System.Drawing.Point(79, 83);
             this.Account.Name = "Account";
