@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Main {
 
@@ -5,6 +6,7 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		Spielfeld spielfeld = new Spielfeld();
+		Scanner scanner = new Scanner(System.in);
 		spielfeld.zeichneSpielfeld();
 	
 		spielfeld.setzeStein(3, 'O');
@@ -18,22 +20,11 @@ public class Main {
 		spielfeld.setzeStein(3, 'S');
 		
 		
-		spielfeld.setzeStein(1, 'O');
-		spielfeld.setzeStein(1, 'X');
-		spielfeld.setzeStein(4, 'O');
-		spielfeld.setzeStein(6, 'O');
-		spielfeld.setzeStein(2, 'X');
-		spielfeld.setzeStein(5, 'X');
+		while(Spielfeld.isRunning){
+			spielfeld.setzeStein(scanner.nextInt(), 'X');
+		}
+		scanner.close();
 		
-		spielfeld.setzeStein(2, 'O');
-		spielfeld.setzeStein(4, 'O');
-		
-		spielfeld.setzeStein(0, 'X');
-		spielfeld.setzeStein(0, 'X');
-		spielfeld.setzeStein(0, 'O');
-		spielfeld.setzeStein(0, 'O');
-		spielfeld.setzeStein(0, 'O');
-		spielfeld.setzeStein(0, 'O');
 		
 	}
 

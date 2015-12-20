@@ -1,6 +1,7 @@
 
 public class Spielfeld {
 
+	public static boolean isRunning = true;
 	private char [][] spielfeld;
 
 	public Spielfeld() {
@@ -42,22 +43,30 @@ public class Spielfeld {
 		System.out.println("_________________________");
 	}
 	
-	public void setzeStein(int position, char stein){
-		System.out.println(this.spielfeld.length);
-		
-		for (int i = this.spielfeld.length - 1; i > 0; i--) {
-			if(this.spielfeld[i][position] == ' '){
-				this.spielfeld[i][position] = stein;
-				stein = ' ';
+	public void setzeStein(int position, char stein){	
+		if(0 <= position && position < 7){
+			for (int i = this.spielfeld.length - 1; i > 0; i--) {
+				if(this.spielfeld[i][position] == ' '){
+					this.spielfeld[i][position] = stein;
+					stein = ' ';
+				}
 			}
+			zeichneSpielfeld();
+			pruefeSieg();
+		}else{
+			System.out.println("Fehlerhafte Eingabe - Nur Zahlen von 0 - 6");
 		}
-		zeichneSpielfeld();
-		pruefeSieg();
+		
+		
 	}
 	
 	private void pruefeSieg(){
 		System.out.println("Horizontal: " + pruefeHorizontal());
 		System.out.println("Vertikal: " + pruefeVertikal());
+		
+		if(pruefeHorizontal() || pruefeVertikal()){
+			isRunning = false;
+		}
 	}
 	
 	private boolean pruefeHorizontal(){
