@@ -28,6 +28,8 @@ public class Main {
 		spielfeld.setzeStein(2, 'O');
 		spielfeld.setzeStein(4, 'O');
 		
+		spielfeld.setzeStein(0, 'X');
+		spielfeld.setzeStein(0, 'X');
 		spielfeld.setzeStein(0, 'O');
 		spielfeld.setzeStein(0, 'O');
 		spielfeld.setzeStein(0, 'O');

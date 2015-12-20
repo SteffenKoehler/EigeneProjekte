@@ -84,27 +84,20 @@ public class Spielfeld {
 	
 	
 	private boolean pruefeVertikal(){
-		int counter = 0;
-		
 		for (int i = 0; i < this.spielfeld.length; i++) {
 			for (int j = 0; j < this.spielfeld.length; j++) {
-				if(i+4 < this.spielfeld.length){
+				if(i+3 < this.spielfeld.length){
 					if(spielfeld[i][j] == spielfeld[i+1][j]
 							&& spielfeld[i][j] == spielfeld[i+2][j]
 							&& spielfeld[i][j] == spielfeld[i+3][j]
 							&& spielfeld[i][j] != ' '){
-						counter++;
-						if(counter == 3){
 							return true;
 						}
 					}
-					else{
-						counter = 0;
-					}
+					
 					
 				}
 			}
-		}
 		return false;
 	}
 	
